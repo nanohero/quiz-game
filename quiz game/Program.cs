@@ -1,10 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 int numRight = 0;
 int numWrong = 0;
+int numCoreect = 0;
+int numTotal = 10;
 String name = "";
 string answerInput;
 
-Console.WriteLine("quiz questions taken from collegiate.quizbowlpackets.com");
+Console.WriteLine("quiz questions taken from https://www.mathopolis.com/");
 Console.WriteLine("Welcome to the quiz game. Please enter your name");
 Console.Write("Name:");
 name= Console.ReadLine();
@@ -17,9 +19,31 @@ answerInput = Console.ReadLine();
 if (answerInput=="5")
 {
     Console.WriteLine("CORRECT");
+    numCoreect++;
 }
 else
 {
     Console.WriteLine("WRONG!");
+    Console.WriteLine("Correct answer was 5");
 }
 Console.WriteLine(answerInput);
+Console.WriteLine("Please any key to move onto the next question");
+Console.Read();
+
+Console.WriteLine("Question #2:The Harmonic Mean of three numbers is 6\r\n\r\nThe first nmber is 3 and the third number is two times the second number.\r\nWhat is the second number?");
+Console.Write("Answer");
+answerInput = Console.ReadLine();
+if (answerInput == "9")
+{
+    Console.WriteLine("CORRECT");
+    numCoreect++;
+}
+else
+{
+    Console.WriteLine("WRONG!");
+    Console.WriteLine("Correct answer was 9");
+}
+Console.WriteLine(answerInput);
+
+
+Console.WriteLine(numCoreect + "/" + numTotal);
